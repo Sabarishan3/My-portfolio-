@@ -53,34 +53,6 @@ export const projects = [
   },
 ];
 
-export const experience = [
-  {
-    role: 'Business Development Specialist',
-    org: 'Studio Palasa',
-    place: 'Bengaluru',
-    dates: 'Nov 2025 – Aug 2026',
-    points: [
-      'Owned the full sales cycle — prospecting, discovery, demos, negotiation and closure — generating about INR 29 lakhs in revenue.',
-      'Reached an 85% lead-to-close conversion through consultative, solution-focused selling.',
-      'Tracked pipeline and conversion metrics in CRM and reported performance to management.',
-      'Worked with internal teams to align client expectations with delivery.',
-    ],
-  },
-  {
-    role: 'Customer Support Specialist',
-    org: 'Mediacle',
-    place: 'Bengaluru · Hybrid',
-    dates: 'May 2025 – Oct 2025',
-    points: [
-      'Handled hardware and software queries over calls, email and chat, resolving most cases at first contact.',
-      'Diagnosed problems, reproduced bugs and escalated complex cases to engineering with clear, detailed reports.',
-      'Worked cross-functionally to close client tickets inside agreed response times.',
-      'Maintained documentation and support logs so the team could resolve repeat issues faster.',
-      'Explained technical concepts in plain language, building client trust.',
-    ],
-  },
-];
-
 export const education = {
   degree: 'B.Tech, Electronics & Communication Engineering',
   school: 'Jain (Deemed-to-be) University',

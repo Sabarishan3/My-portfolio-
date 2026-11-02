@@ -3,7 +3,6 @@ import {
   bio,
   certifications,
   education,
-  experience,
   faces,
   interests,
   languages,
@@ -178,83 +177,60 @@ function CV() {
         <SectionHead
           kicker="02 — CV"
           title="Where I’ve been"
-          note="A sales and support background, a data-science training, and a frontend toolkit — the mix shapes how I build."
+          note="A data-science foundation, an electronics degree, and a frontend toolkit — each one shapes how I build."
         />
 
-        <div className="grid gap-12 md:grid-cols-[1.12fr_0.88fr]">
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
           <div>
-            <h3 className="text-micro font-medium uppercase text-mute">Experience</h3>
-            <ol className="mt-5 space-y-8">
-              {experience.map((e) => (
-                <li key={e.role} className="border-t border-line pt-5">
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                    <h4 className="font-display text-[clamp(19px,1.7vw,24px)] font-bold tracking-[-0.015em]">{e.role}</h4>
-                    <span className="text-micro font-medium uppercase text-mute tabular-nums">{e.dates}</span>
-                  </div>
-                  <p className="mt-0.5 text-lede text-mute">
-                    {e.org} · {e.place}
-                  </p>
-                  <ul className="mt-3 space-y-1.5">
-                    {e.points.map((pt) => (
-                      <li key={pt} className="flex gap-2.5 text-lede text-mute">
-                        <span className="text-disc" aria-hidden>
-                          ↳
-                        </span>
-                        <span>{pt}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ol>
+            <h3 className="text-micro font-medium uppercase text-mute">Education</h3>
+            <div className="mt-4 rounded-2xl border border-line p-5">
+              <p className="font-display text-[17px] font-bold leading-snug tracking-[-0.01em]">{education.degree}</p>
+              <p className="mt-1 text-lede text-mute">
+                {education.school} · {education.place}
+              </p>
+              <p className="mt-2 text-micro font-medium uppercase text-mute tabular-nums">
+                {education.dates} · {education.detail}
+              </p>
+            </div>
           </div>
 
-          <div className="space-y-9">
-            <div>
-              <h3 className="text-micro font-medium uppercase text-mute">Education</h3>
-              <div className="mt-4 rounded-2xl border border-line p-5">
-                <p className="font-display text-[17px] font-bold leading-snug tracking-[-0.01em]">{education.degree}</p>
-                <p className="mt-1 text-lede text-mute">
-                  {education.school} · {education.place}
-                </p>
-                <p className="mt-2 text-micro font-medium uppercase text-mute tabular-nums">
-                  {education.dates} · {education.detail}
-                </p>
+          <div>
+            <h3 className="text-micro font-medium uppercase text-mute">Certifications</h3>
+            <ul className="mt-4 space-y-3">
+              {certifications.map((c) => (
+                <li key={c.name} className="flex items-baseline justify-between gap-4 border-b border-line pb-3">
+                  <span>
+                    <span className="block text-[14px] font-medium">{c.name}</span>
+                    <span className="block text-micro text-mute">{c.org}</span>
+                  </span>
+                  <span className="text-micro font-medium uppercase text-mute tabular-nums">{c.year}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-2 xl:col-span-1">
+            <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-1 xl:gap-9">
+              <div>
+                <h3 className="text-micro font-medium uppercase text-mute">Languages</h3>
+                <ul className="mt-3 flex flex-wrap gap-1.5">
+                  {languages.map((l) => (
+                    <li key={l} className="rounded-full border border-line px-2.5 py-1 text-micro text-mute">
+                      {l}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-micro font-medium uppercase text-mute">Certifications</h3>
-              <ul className="mt-4 space-y-3">
-                {certifications.map((c) => (
-                  <li key={c.name} className="flex items-baseline justify-between gap-4 border-b border-line pb-3">
-                    <span>
-                      <span className="block text-[14px] font-medium">{c.name}</span>
-                      <span className="block text-micro text-mute">{c.org}</span>
-                    </span>
-                    <span className="text-micro font-medium uppercase text-mute tabular-nums">{c.year}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-micro font-medium uppercase text-mute">Languages</h3>
-              <ul className="mt-3 flex flex-wrap gap-1.5">
-                {languages.map((l) => (
-                  <li key={l} className="rounded-full border border-line px-2.5 py-1 text-micro text-mute">
-                    {l}
-                  </li>
-                ))}
-              </ul>
-              <h3 className="mt-6 text-micro font-medium uppercase text-mute">Interests</h3>
-              <ul className="mt-3 flex flex-wrap gap-1.5">
-                {interests.map((l) => (
-                  <li key={l} className="rounded-full border border-line px-2.5 py-1 text-micro text-mute">
-                    {l}
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <h3 className="text-micro font-medium uppercase text-mute">Interests</h3>
+                <ul className="mt-3 flex flex-wrap gap-1.5">
+                  {interests.map((l) => (
+                    <li key={l} className="rounded-full border border-line px-2.5 py-1 text-micro text-mute">
+                      {l}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
